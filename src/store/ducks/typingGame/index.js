@@ -19,8 +19,7 @@ export const INITIAL_STATE = {
   hasStarted: false
 }
 
-// eslint-disable-next-line no-unused-vars
-const decrementTimer = (state = INITIAL_STATE, action) => ({
+const decrementTimer = (state = INITIAL_STATE) => ({
   ...state,
   timer: state.timer - 1
 })
@@ -35,14 +34,12 @@ const saveScore = (state = INITIAL_STATE, action) => ({
   score: action.score
 })
 
-// eslint-disable-next-line no-unused-vars
-const setStarted = (state = INITIAL_STATE, action) => ({
+const setStarted = (state = INITIAL_STATE) => ({
   ...state,
   hasStarted: true
 })
 
-// eslint-disable-next-line no-unused-vars
-const restart = (state = INITIAL_STATE, action) => ({
+const restart = () => ({
   ...INITIAL_STATE
 })
 
