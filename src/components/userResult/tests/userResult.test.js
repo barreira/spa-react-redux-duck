@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { initialState } from '../../../reducers/user'
+import { INITIAL_STATE } from '../../../store/ducks/user'
 import { UserResult } from '../../userResult'
 import { mapStateToProps } from '../../userResult'
 
@@ -8,7 +8,7 @@ describe('UserResult component', () => {
   let wrapper, userProp, h5s
 
   beforeEach(() => {
-    wrapper = shallow(<UserResult user={initialState} />)
+    wrapper = shallow(<UserResult user={INITIAL_STATE} />)
   })
 
   it('should render a styled div component at the root', () => {

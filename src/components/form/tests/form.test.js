@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import { Form } from '../../form'
 import Input from '../../input'
 import { mapDispatchToProps } from '../../form'
-import { Creators as FormCreators } from '../../../actions/form'
+import { Creators as FormCreators } from '../../../store/ducks/form'
 
 describe('Form component', () => {
   let wrapper

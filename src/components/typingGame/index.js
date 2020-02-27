@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { bool, func, number, string } from 'prop-types'
-import { Creators as TypingGameCreators } from '../../actions/typingGame'
+import { Creators as TypingGameCreators } from '../../store/ducks/typingGame'
 import { SAMPLE_TEXT } from '../../constants'
 import { Wrapper } from '../styles'
 

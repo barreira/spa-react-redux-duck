@@ -1,7 +1,7 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 import { Provider } from 'react-redux'
-import store from './app.store'
+import store from './store'
 import Main from './pages/main'
 
 const App = () => (

@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { User } from '../../user'
 import { mapDispatchToProps } from '../../user'
-import { Creators as UserCreators } from '../../../actions/user'
+import { Creators as UserCreators } from '../../../store/ducks/user'
 
 describe('User component', () => {
   let wrapper

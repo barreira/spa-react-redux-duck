@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { func } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Creators as UserCreators } from '../../actions/user'
+import { Creators as UserCreators } from '../../store/ducks/user'
 import Input from '../input'
 import { Wrapper } from '../styles'
 

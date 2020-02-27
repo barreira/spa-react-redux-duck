@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { initialState } from '../../../reducers/typingGame'
+import { INITIAL_STATE } from '../../../store/ducks/typingGame'
 import { TypingGame } from '../../typingGame'
 import { SAMPLE_TEXT } from '../../../constants'
-import { Creators as TypingGameCreators } from '../../../actions/typingGame'
+import { Creators as TypingGameCreators } from '../../../store/ducks/typingGame'
 import { mapDispatchToProps, mapStateToProps } from '../index'
 
 describe('FormResult component', () => {
@@ -11,10 +11,10 @@ describe('FormResult component', () => {
 
   beforeEach(() => {
     props = {
-      timer: initialState.timer,
-      text: initialState.text,
-      score: initialState.score,
-      hasStarted: initialState.hasStarted,
+      timer: INITIAL_STATE.timer,
+      text: INITIAL_STATE.text,
+      score: INITIAL_STATE.score,
+      hasStarted: INITIAL_STATE.hasStarted,
       userName: 'João Barreira',
       decrementTimer: () => {},
       saveText: () => {},

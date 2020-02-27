@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { initialState } from '../../../reducers/form'
+import { INITIAL_STATE } from '../../../store/ducks/form'
 import { FormResult } from '../../formResult'
 import { mapStateToProps } from '../../formResult'
 
@@ -8,7 +8,7 @@ describe('FormResult component', () => {
   let wrapper, state
 
   beforeEach(() => {
-    state = initialState
+    state = INITIAL_STATE
 
     wrapper = shallow(<FormResult data={state.data} />)
   })
@@ -19,7 +19,7 @@ describe('FormResult component', () => {
 
   describe("when there's no data", () => {
     beforeEach(() => {
-      state = initialState
+      state = INITIAL_STATE
 
       wrapper = shallow(<FormResult data={state.data} />)
     })

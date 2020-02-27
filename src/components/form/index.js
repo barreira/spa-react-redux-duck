@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { func } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Creators as FormCreators } from '../../actions/form'
+import { Creators as FormCreators } from '../../store/ducks/form'
 import Input from '../input'
 import { Wrapper } from '../styles'
 
