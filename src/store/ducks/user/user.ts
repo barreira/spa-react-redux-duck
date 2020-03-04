@@ -1,11 +1,13 @@
 import { User, UserTypes, UserActions } from './types';
 
-interface UserState {
-  byId: {
-    [id: string]: User;
-  };
-}
-const INITIAL_STATE = {};
+const INITIAL_STATE: User[] = [
+  {
+    id: 1,
+    firstName: 'Pedro',
+    lastName: 'Gonçalves',
+    age: 30
+  }
+];
 
 export const saveUserAction = (user: User) => ({
   type: UserTypes.SAVE_USER,

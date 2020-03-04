@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { User, userReducer } from './user';
 
-interface StoreState {
+export interface StoreState {
   user: User[];
 }
 
