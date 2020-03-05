@@ -1,23 +1,15 @@
 import * as React from 'react';
 
-import User from '../components/User';
-import Form from '../components/Form';
-import FormResult from '../components/FormResult';
-import { UserResult } from '../components/UserResult';
+import UserForm from '../components/UserForm';
+import UsersList from '../components/UsersList';
 import TypingGame from '../components/TypingGame';
 import TypingGameResult from '../components/TypingGameResult';
-import { Wrapper, Container } from './styles';
+import { Wrapper, Container } from '../styles';
 
 export default class Main extends React.Component {
   render() {
     return (
       <Wrapper>
-        <Container>
-          <h1>Form</h1>
-          <Form />
-          <FormResult />
-        </Container>
-
         <Container>
           <h1>Typing Game</h1>
           <TypingGame />
@@ -26,9 +18,12 @@ export default class Main extends React.Component {
 
         <Container>
           <h1>Add User</h1>
-          <User />
+          <UserForm />
+        </Container>
+
+        <Container>
           <h1>Users</h1>
-          <UserResult />
+          <UsersList />
         </Container>
       </Wrapper>
     );

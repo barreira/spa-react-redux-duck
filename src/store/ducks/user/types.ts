@@ -11,17 +11,17 @@ export enum UserTypes {
   DELETE_USER = 'DELETE_USER'
 }
 
-interface SaveUserAction {
+export interface SaveUserAction {
   type: UserTypes.SAVE_USER;
   payload: {
     user: User;
   };
 }
 
-interface DeleteUserAction {
+export interface DeleteUserAction {
   type: UserTypes.DELETE_USER;
   payload: {
-    userId: number;
+    id: number;
   };
 }
 

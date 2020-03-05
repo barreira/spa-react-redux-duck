@@ -1,10 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Wrapper } from '../styles';
+import { StoreState } from '../../store/ducks';
+import { Container } from '../../styles';
 
-export const TypingGameResult: React.FC<{}> = () => (
-  <Wrapper>TypingGameResult score: 1092 credits</Wrapper>
+interface TypingGameResultProps {
+  score: number;
+}
+
+const TypingGameResult: React.FC<TypingGameResultProps> = ({ score }) => (
+  <Container>{<h5>{`Score: ${score}`}</h5>}</Container>
 );
 
-export default connect(() => ({}), null)(TypingGameResult);
+export const mapStateToProps = (state: StoreState) => {
+  return {
+    score: state.typingGame.score
+  };
+};
+
+export default connect(mapStateToProps)(TypingGameResult);
