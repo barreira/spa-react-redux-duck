@@ -6,7 +6,14 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "format": "pretty-quick",
+    "lint": "eslint ./src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "browserslist": {
     "production": [
@@ -54,6 +61,8 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "husky": "^4.2.3",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "ts-jest": "^25.2.1"
   }
 }
