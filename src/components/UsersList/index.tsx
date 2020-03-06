@@ -3,11 +3,17 @@ import { connect } from 'react-redux';
 
 import { Container, List } from '../../styles';
 import { StoreState } from '../../store/ducks';
-import { User, deleteUserAction } from '../../store/ducks/user';
+import {
+  User,
+  deleteUserAction,
+  fetchUsersAction
+} from '../../store/ducks/user';
 
 type UsersListProps = {
   users: User[];
   deleteUser: typeof deleteUserAction;
+  fetchUsers: () => void;
+  //fetchUsers: typeof fetchUsersAction;
 };
 
 const FCUser: React.FC<{ user: User; onDelete: (id: number) => void }> = ({
@@ -27,18 +33,26 @@ const FCUser: React.FC<{ user: User; onDelete: (id: number) => void }> = ({
 
 const UsersList: React.FC<UsersListProps> = ({
   users,
-  deleteUser
+  deleteUser,
+  fetchUsers
 }): JSX.Element => {
   return (
     <Container>
+      <p>
+        <button onClick={fetchUsers}>Fetch more users...</button>
+      </p>
       {users.length ? (
         <List>
           {users.map(user => (
-            <FCUser key={`user-${user.id}`} user={user} onDelete={deleteUser} />
+            <FCUser
+              key={`user-${user.id}-${user.firstName}`}
+              user={user}
+              onDelete={deleteUser}
+            />
           ))}
         </List>
       ) : (
-        'No users do display...'
+        <div>No users do display...</div>
       )}
     </Container>
   );
@@ -48,6 +62,7 @@ const mapStateToProps = (state: StoreState) => ({
   users: state.user
 });
 
-export default connect(mapStateToProps, { deleteUser: deleteUserAction })(
-  UsersList
-);
+export default connect(mapStateToProps, {
+  deleteUser: deleteUserAction,
+  fetchUsers: fetchUsersAction
+})(UsersList);

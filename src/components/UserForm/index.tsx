@@ -42,7 +42,6 @@ const UserForm: React.FC<UserFormProps> = ({ saveUser }): JSX.Element => {
     const { firstName = '', lastName = '', age = 0 } = user;
 
     saveUser({
-      id: Math.random(),
       firstName,
       lastName,
       age

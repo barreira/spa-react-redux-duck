@@ -56,9 +56,6 @@ export const TypingGame: React.FC<TypingGame> = ({
   };
 
   const endGame = () => {
-    //const finalScore = calculateScore();
-    //saveScore(finalScore);
-
     const resultMessage = generateResultMessage();
 
     return (
