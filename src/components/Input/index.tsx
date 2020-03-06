@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-interface InputProps {
+export interface InputProps {
   title: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Input: React.FC<InputProps> = ({ title, onChange, value }) => (
+const Input: React.FC<InputProps> = ({ title, onChange, value }) => (
   <fieldset>
     <label>
       <div>{title}:</div>
